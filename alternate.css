@@ -17,6 +17,7 @@ body {
   margin: 1rem;
   font-family: sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* images and videos max out at full width */
@@ -26,54 +27,77 @@ video {
   max-width: 50%;
 }
 
+p {
+  font-family: "Roboto Mono", monospace;
+  font-style: italic;
+  font-size: 300px;
+  color: #ef3340;
+  width: initial;
+  position: relative;
+  right: 50px;
+  transform: scaleX(7);
+  line-height: 2;
+}
 h1 {
   font-family: "Roboto Mono", monospace;
-  font-style: bold;
+  font-style: italic;
   font-size: auto;
-  color: #ef3340;
+  color: #EF3340;
   width: initial;
   opacity: 1;
   position: relative;
   left: 50px;
-  transform: scaleX(-1.2);
+  transform: scaleX(1.2);
   line-height: 2;
 }
 h2 {
   font-family: "Roboto Mono", monospace;
-  font-style: bold;
+  font-style: italic;
   font-size: auto;
   color: #809EAC;
   width: initial;
   opacity: 1;
   position: relative;
   left: 50px;
-  transform: scaleX(-1.2);
+  transform: scaleX(1.2);
   line-height: 3;
 }
 h3 {
   font-family: "Roboto Mono", monospace;
-  font-style: bold;
+  font-style: italic;
   font-size: auto;
   color: #3626A7;
   width: initial;
   opacity: 1;
   position: relative;
   left: 50px;
-  transform: scaleX(-1.2);
+  transform: scaleX(1.2);
   line-height: 1;
 }
 button {
   font-family: "Roboto Mono", monospace;
   font-style: italic;
   font-size: auto;
-  background: #3626A7;
-  color: #ef3340;
+  background: #39FF14;
+  color: #3626A7;
   padding: 10px 10px;
   text-align: center;
   display: inline-block;
   margin: 4px 2px;
   max-width: auto;
-  transform: scaleX(1.2);
+  transform: scaleX(-1.2);
+}
+.buttons {
+  font-family: "Roboto Mono", monospace;
+  font-style: italic;
+  font-size: 15px;
+  color: #39FF14;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  max-width: auto;
+  transform: scaleY(1.1);
 }
 .column-wrapper {
   display: flex;
@@ -92,7 +116,7 @@ button {
   flex-grow: 2;
 }
 .river {
-  background-color: #ef3340;
+  background-color: #EF3340;
   flex-grow: 1;
 }
 .desert {
@@ -100,17 +124,17 @@ button {
   flex-grow: 3;
 }
 .section {
-  background-color: #00000;
+  background-color: #ffffff;
   flex-direction: row;
 }
 
 .ticker-wrap {
   width: 100%;
-  padding: 25px;
-  background-color: #39ff14;
+  padding: 4em;
+  background-color: #39FF14;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 @media screen and (min-width: 1000px) {
   .container {
@@ -124,17 +148,9 @@ button {
     background-repeat: no-repeat;
   }
 }
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 .ticker {
   display: flex;
+  justify-content: flex-end;
 }
 .ticker__list {
   display: flex;
@@ -142,7 +158,16 @@ button {
   animation: ticker 1s infinite;
 }
 .ticker__item {
+  animation-name: spin;
+  animation-duration: 12000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
-body {
-  overflow-x: hidden;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
