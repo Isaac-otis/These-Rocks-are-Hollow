@@ -88,15 +88,15 @@ button {
   min-width: 100wh;
 }
 .rocks {
-  background-color: #ef3340;
+  background-color: #3626A7;
   flex-grow: 2;
 }
 .river {
-  background-color: #809EAC;
+  background-color: #ef3340;
   flex-grow: 1;
 }
 .desert {
-  background-color: #3626A7;
+  background-color: #809EAC;
   flex-grow: 3;
 }
 .section {
@@ -105,13 +105,9 @@ button {
 }
 
 .ticker-wrap {
-  font-family: "Roboto Mono", monospace;
-  font-style: italic;
   width: 100%;
   padding: 25px;
-  background-color: coral;
-  color: white;
-  font-size: auto;
+  background-color: #39ff14;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
