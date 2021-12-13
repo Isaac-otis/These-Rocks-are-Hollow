@@ -150,6 +150,7 @@ button {
 }
 .ticker {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: flex-end;
 }
 .ticker__list {
